@@ -1,0 +1,9 @@
+.content {
+    display: inline-grid;
+}
+
+.pixel {
+    border: solid 1px;
+    height: 30px;
+    width: 30px;
+}

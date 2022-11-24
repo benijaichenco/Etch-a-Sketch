@@ -29,3 +29,24 @@ function reset() {
         pixel.remove();
     });
 }
+
+//generate function to resize grid
+function selectSize(size) {
+    size = prompt('Select size', '16');
+    if (size === null || undefined) {
+        return;
+    } else if (size > 100) {
+        alert('Maximum grid size is 100');
+    } else {
+        reset();
+        content.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        //for loop
+        for (let i = 0; i < (size * size); i++) {
+            const box = document.createElement('div');
+            content.appendChild(box).classList.add('pixel');
+            box.addEventListener('mouseover', () => {
+                box.style.background = 'black';
+            });
+        }
+    }
+}

@@ -16,3 +16,8 @@ function createGrid() {
     }
 }
 createGrid();
+
+//create button at top of screen to select grid size
+const resize = document.createElement('button');
+resize.textContent = 'Select Size';
+container.insertBefore(resize, content).classList.add('resize');

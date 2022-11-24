@@ -32,8 +32,9 @@ function reset() {
 
 //generate function to resize grid
 function selectSize(size) {
-    size = prompt('Select size', '16');
-    if (size === null || undefined) {
+    size = prompt('Select size', '');
+    console.log(size);
+    if (size === null || size === undefined || size === '') {
         return;
     } else if (size > 100) {
         alert('Maximum grid size is 100');

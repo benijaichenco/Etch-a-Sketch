@@ -21,3 +21,11 @@ createGrid();
 const resize = document.createElement('button');
 resize.textContent = 'Select Size';
 container.insertBefore(resize, content).classList.add('resize');
+
+//generete function to reset the grid
+function reset() {
+    const pixels = content.querySelectorAll('div');
+    pixels.forEach(pixel => {
+        pixel.remove();
+    });
+}

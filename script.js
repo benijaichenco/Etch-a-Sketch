@@ -51,3 +51,6 @@ function selectSize(size) {
         }
     }
 }
+
+//when 'resize' button clicked, initiate 'selectSize' function
+resize.addEventListener('click', selectSize);

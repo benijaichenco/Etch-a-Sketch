@@ -85,3 +85,9 @@ function randomColor(size) {
         }
     }
 }
+
+//create button to select color mode
+const color = document.createElement('button');
+color.textContent = 'Color';
+container.insertBefore(color, content);
+color.addEventListener('click', randomColor);

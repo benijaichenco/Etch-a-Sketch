@@ -54,3 +54,12 @@ function selectSize(size) {
 
 //when 'resize' button clicked, initiate 'selectSize' function
 resize.addEventListener('click', selectSize);
+
+//generate function to return random color
+function getColor() {
+    let R = Math.floor(Math.random() * 255);
+    let G = Math.floor(Math.random() * 255);
+    let B = Math.floor(Math.random() * 255);
+    let color = `rgb(${R},${G},${B})`;
+    return color;
+}

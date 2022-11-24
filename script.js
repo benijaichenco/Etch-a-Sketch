@@ -63,3 +63,25 @@ function getColor() {
     let color = `rgb(${R},${G},${B})`;
     return color;
 }
+
+//generate function to chagne grid pixels to random colors
+function randomColor(size) {
+    size = prompt('Select size', '');
+    console.log(size);
+    if (size === null || size === undefined || size === '') {
+        return;
+    } else if (size > 100) {
+        alert('Maximum grid size is 100');
+    } else {
+        reset();
+        content.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        //for loop
+        for (let i = 0; i < (size * size); i++) {
+            const box = document.createElement('div');
+            content.appendChild(box).classList.add('pixel');
+            box.addEventListener('mouseover', () => {
+                box.style.background = getColor();
+            });
+        }
+    }
+}

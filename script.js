@@ -122,3 +122,5 @@ function makeDarker(size) {
         }
     }
 }
+
+shader.addEventListener('click', makeDarker);

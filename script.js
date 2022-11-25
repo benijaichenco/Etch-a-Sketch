@@ -19,7 +19,7 @@ createGrid();
 
 //create button at top of screen to select grid size
 const resize = document.createElement('button');
-resize.textContent = 'Select Size';
+resize.textContent = 'Select Size (Black)';
 container.insertBefore(resize, content).classList.add('resize');
 
 //generete function to reset the grid
@@ -88,6 +88,6 @@ function randomColor(size) {
 
 //create button to select color mode
 const color = document.createElement('button');
-color.textContent = 'Color';
+color.textContent = 'Select Size (Color)';
 container.insertBefore(color, content);
 color.addEventListener('click', randomColor);

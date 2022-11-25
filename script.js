@@ -97,3 +97,28 @@ color.addEventListener('click', randomColor);
 const shader = document.createElement('button');
 shader.textContent = 'Select Size (Shader)';
 container.insertBefore(shader, content);
+
+//generate makeDarker function
+function makeDarker(size) {
+    size = prompt('Select size', '');
+    console.log(size);
+    if (size === null || size === undefined || size === '') {
+        return;
+    } else if (size > 100) {
+        alert('Maximum grid size is 100');
+    } else {
+        reset();
+        content.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        //for loop
+        for (let i = 0; i < (size * size); i++) {
+            const box = document.createElement('div');
+            box.style.background = 'black';
+            box.style.opacity = 0;
+            content.appendChild(box).classList.add('pixel');
+            box.addEventListener('mouseover', () => {
+                let opacity = box.style.opacity;
+                box.style.opacity = (Number(opacity) + 0.1);
+            });
+        }
+    }
+}

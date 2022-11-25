@@ -91,3 +91,9 @@ const color = document.createElement('button');
 color.textContent = 'Select Size (Color)';
 container.insertBefore(color, content);
 color.addEventListener('click', randomColor);
+
+//generate function to make pixels darker
+//create 'shader' button
+const shader = document.createElement('button');
+shader.textContent = 'Select Size (Shader)';
+container.insertBefore(shader, content);
